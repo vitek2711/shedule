@@ -2037,9 +2037,9 @@ const GRADE_LETTERS = {
   11: ["А"],
 };
 const PROFILES = {
-  "10А": ["ХимБио", "ФизМат"],
-  "10Б": ["РусМат", "ОбщИст", "База"],
-  "11А": ["МатРус", "АнгОбщ", "ХимБио"],
+'10А': ['ХБ','ФМ'],
+'10Б': ['РМ','ОИ','База'],
+'11А': ['МатРус','АО','ХБ']
 };
 const state = { grade: null, letter: null, profile: null, day: 0, mode: "day" };
 const gradeSelect = document.getElementById("gradeSelect");
