@@ -8,56 +8,19 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="school-badge">📚 2026/2027 учебный год</div>
-            <h1>ГУО «Средняя школа №41 г.Могилёва»</h1>
-            <div class="subtitle">Расписание учебных занятий</div>
-        </header>
-        <div class="controls">
-            <div class="controls-grid">
-                <div class="control-group">
-                    <label>Класс</label>
-                    <select id="gradeSelect">
-                        <option value="">Выберите класс</option>
-                    </select>
-                </div>
-                <div class="control-group">
-                    <label>Буква</label>
-                    <select id="letterSelect">
-                        <option value="">Выберите букву</option>
-                    </select>
-                </div>
-                <div class="control-group" id="profileGroup" style="display:none">
-                    <label>Профиль/группа</label>
-                    <select id="profileSelect"></select>
-                </div>
-                <div class="control-group" id="dayGroup">
-                    <label>День недели</label>
-                    <select id="daySelect">
-                        <option value="0">Понедельник</option>
-                        <option value="1">Вторник</option>
-                        <option value="2">Среда</option>
-                        <option value="3">Четверг</option>
-                        <option value="4">Пятница</option>
-                    </select>
-                </div>
-                <div class="control-group">
-                    <label>Режим отображения</label>
-                    <div class="mode-toggle">
-                        <button id="modeDay" class="active">📅 На день</button>
-                        <button id="modeWeek">📆 На неделю</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="info-bar">
-            <div class="current-time"><span class="dot"></span><span id="currentTime">—</span></div>
-            <div id="currentLessonInfo" style="color: var(--text-soft); font-weight: 500;"></div>
-        </div>
-        <div class="schedule" id="scheduleContainer"></div>
-        <footer>Расписание обновляется автоматически • © 2026 СШ №41 г. Могилёва</footer>
-    </div>
+<div class="container">
+<header><div class="school-badge">📚 2026 / 2027 учебный год</div><h1>ГУО «Средняя школа №41 г. Могилёва»</h1><div class="subtitle">Интерактивное расписание учебных занятий</div><a class="school-site-link" href="https://school41mogilev.by/" target="_blank" rel="noopener noreferrer">🌐 На сайт школы ↗</a><button type="button" id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Переключить тему">🌙 Тёмная тема</button></header>
+<section class="controls" aria-label="Настройки расписания"><div class="controls-grid">
+<div class="control-group"><label for="gradeSelect">Класс</label><select id="gradeSelect"><option value="">Выберите класс</option></select></div>
+<div class="control-group"><label for="letterSelect">Буква</label><select id="letterSelect"><option value="">Выберите букву</option></select></div>
+<div class="control-group" id="profileGroup" hidden><label for="profileSelect">Профиль / группа</label><select id="profileSelect"></select></div>
+<div class="control-group" id="dayGroup"><label for="daySelect">День недели</label><select id="daySelect"><option value="0">Понедельник</option><option value="1">Вторник</option><option value="2">Среда</option><option value="3">Четверг</option><option value="4">Пятница</option></select></div>
+<div class="control-group"><label>Режим отображения</label><div class="mode-toggle"><button type="button" id="modeDay" class="active" aria-pressed="true">📅 На день</button><button type="button" id="modeWeek" aria-pressed="false">📆 На неделю</button></div></div>
+</div></section>
+<div class="info-bar"><div class="current-time"><span class="live-dot"></span><span id="currentTime">—</span></div><div class="lesson-status" id="currentLessonInfo" aria-live="polite"></div></div>
+<main class="schedule" id="scheduleContainer" aria-live="polite"></main>
+<footer>Расписание на 2026 / 2027 учебный год · © 2026 СШ №41 г. Могилёва<div class="small-note">Время уроков и предметы отображаются согласно данным, встроенным в приложение.</div></footer>
+</div>
     <script src="./script.js"></script>
 </body>
 
